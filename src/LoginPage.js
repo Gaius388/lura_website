@@ -6,7 +6,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [auth, setAuth] = useState(false);
+  // const [auth, setAuth] = useState(false);
   const navigate = useNavigate();
   const usersWithAccess = [
     { email: "gaiusolawale", password: "password1" },
@@ -24,12 +24,12 @@ const LoginPage = () => {
       );
     });
     if (users) {
-      setAuth(true);
+      // setAuth(true);
       setErrorMessage("");
       localStorage.setItem("isAuthenticated", true);
       navigate("/dashboard");
     } else {
-      setAuth(false);
+      // setAuth(false);
       setEmail("");
       setPassword("");
       localStorage.removeItem("isAuthenticated");
