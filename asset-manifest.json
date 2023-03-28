@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/lura_website/static/css/main.a4dcf656.css",
+    "main.js": "/lura_website/static/js/main.13ca62cc.js",
+    "static/media/vpnImage.svg": "/lura_website/static/media/vpnImage.84c13c3911f7878e3685b0976ca5ac94.svg",
+    "index.html": "/lura_website/index.html",
+    "main.a4dcf656.css.map": "/lura_website/static/css/main.a4dcf656.css.map",
+    "main.13ca62cc.js.map": "/lura_website/static/js/main.13ca62cc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4dcf656.css",
+    "static/js/main.13ca62cc.js"
+  ]
+}
