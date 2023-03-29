@@ -1,6 +1,5 @@
 import React from "react";
 import { MdOutlineDashboard } from "react-icons/md";
-import { HiOutlineCalendarDays } from "react-icons/hi2";
 import { TfiPieChart } from "react-icons/tfi";
 import { BsFacebook } from "react-icons/bs";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
@@ -17,20 +16,21 @@ import {
 } from "react-icons/ai";
 import logo from "./logo192.png";
 import DatePicker from "./DatePicker";
+import { Navigate } from "react-router-dom";
 
-// const withAuth = (Component) => {
-//   const AuthRoute = () => {
-//     const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+const withAuth = (Component) => {
+  const AuthRoute = () => {
+    const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
 
-//     if (isAuthenticated) {
-//       return <Component />;
-//     } else {
-//       return <Navigate to="/login" />;
-//     }
-//   };
+    if (isAuthenticated) {
+      return <Component />;
+    } else {
+      return <Navigate to="/login" />;
+    }
+  };
 
-//   return AuthRoute;
-// };
+  return AuthRoute;
+};
 
 const Dashboard = () => {
   return (
@@ -98,17 +98,9 @@ const Dashboard = () => {
             <li>Trial Users</li>
           </ul>
           <article className="flex items-center gap-1">
-            {/* <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gray-200 rounded-sm">
-              <HiOutlineCalendarDays />
-              <p>27 march 2023</p>
-            </div> */}
             <DatePicker />
             <p>To</p>
             <DatePicker />
-            {/* <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gray-200 rounded-sm">
-              <HiOutlineCalendarDays />
-              <p>03 Feb 2023</p>
-            </div> */}
           </article>
         </div>
         <div className="grid grid-cols-7 px-3 2xl:py-2 sm:py-1.5 justify-items-center 2xl:text-md sm:text-sm bg-gray-100 rounded-md my-6 mr-10">
@@ -121,7 +113,10 @@ const Dashboard = () => {
           <p>Action</p>
         </div>
         <div className="grid">
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2 ">
+          <div
+            className="grid grid-cols-7 px-3 2xl:py-3 sm:py-2.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 
+          transition ease-in-out delay-150 hover:translate-x-6 duration-200 hover:scale-y-110 "
+          >
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -140,7 +135,10 @@ const Dashboard = () => {
               <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
+          <div
+            className="grid grid-cols-7 px-3 2xl:py-3 sm:py-2.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 
+          transition ease-in-out delay-150 hover:translate-x-6 duration-200 hover:scale-y-110 "
+          >
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -159,7 +157,10 @@ const Dashboard = () => {
               <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
+          <div
+            className="grid grid-cols-7 px-3 2xl:py-3 sm:py-2.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 
+          transition ease-in-out delay-150 hover:translate-x-6 duration-200 hover:scale-y-110 "
+          >
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -178,7 +179,10 @@ const Dashboard = () => {
               <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
+          <div
+            className="grid grid-cols-7 px-3 2xl:py-3 sm:py-2.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 
+          transition ease-in-out delay-150 hover:translate-x-6 duration-200 hover:scale-y-110 "
+          >
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -197,7 +201,10 @@ const Dashboard = () => {
               <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
+          <div
+            className="grid grid-cols-7 px-3 2xl:py-3 sm:py-2.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 
+          transition ease-in-out delay-150 hover:translate-x-6 duration-200 hover:scale-y-110 "
+          >
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -216,7 +223,10 @@ const Dashboard = () => {
               <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
+          <div
+            className="grid grid-cols-7 px-3 2xl:py-3 sm:py-2.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 
+          transition ease-in-out delay-150 hover:translate-x-6 duration-200 hover:scale-y-110 "
+          >
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -235,7 +245,10 @@ const Dashboard = () => {
               <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
+          <div
+            className="grid grid-cols-7 px-3 2xl:py-3 sm:py-2.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 
+          transition ease-in-out delay-150 hover:translate-x-6 duration-200 hover:scale-y-110 "
+          >
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -273,5 +286,5 @@ const Dashboard = () => {
   );
 };
 
-// withAuth(Dashboard)
+withAuth(Dashboard);
 export default Dashboard;

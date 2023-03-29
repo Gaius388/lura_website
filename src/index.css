@@ -2,4 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-width: thin;
+  position: absolute;
+  left: 5%;
+}
+input::-webkit-datetime-edit-fields-wrapper {
+  position: relative;
+  left: 8%;
+}
+input::-webkit-datetime-edit {
+  position: relative;
+  left: 10%;
+}

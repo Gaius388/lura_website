@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
 const DatePicker = () => {
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState("2022-03-30");
+
   return (
     <input
-      type="date"
+          type="date"
+          value={date}
       onChange={(e) => setDate(e.target.value)}
-      className="flex items-center gap-1 px-1.5 py-0.5 bg-gray-200 rounded-sm"
+      className="flex items-center px-2 py-0.5 bg-gray-200 rounded-md relative"
     />
   );
 };
