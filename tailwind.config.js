@@ -3,11 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      nunito: ["Nunito", "sans-serif"],
+      manrope: ["Manrope", "sans-serif"],
     },
     extend: {
       gridTemplateColumns: {
-        dashboard: "minmax(15vw,11.5em) 1fr",
+        dashboard: "minmax(17vw,12.5em) 1fr",
       },
     },
   },

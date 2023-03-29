@@ -38,7 +38,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="h-screen grid content-center gap-4 font-nunito">
+    <div className="h-screen grid content-center gap-4 font-manrope">
       <img src={vpnImage} alt="vpn" className="mx-auto" />
       <h2 className="text-center text-2xl font-bold">LURA</h2>
       <form className="w-2/6 mx-auto" onSubmit={handleSubmit}>

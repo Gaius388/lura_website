@@ -1,5 +1,4 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
 import { MdOutlineDashboard } from "react-icons/md";
 import { HiOutlineCalendarDays } from "react-icons/hi2";
 import { TfiPieChart } from "react-icons/tfi";
@@ -17,60 +16,61 @@ import {
   AiOutlineTeam,
 } from "react-icons/ai";
 import logo from "./logo192.png";
+import DatePicker from "./DatePicker";
 
-const withAuth = (Component) => {
-  const AuthRoute = () => {
-    const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+// const withAuth = (Component) => {
+//   const AuthRoute = () => {
+//     const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
 
-    if (isAuthenticated) {
-      return <Component />;
-    } else {
-      return <Navigate to="/login" />;
-    }
-  };
+//     if (isAuthenticated) {
+//       return <Component />;
+//     } else {
+//       return <Navigate to="/login" />;
+//     }
+//   };
 
-  return AuthRoute;
-};
+//   return AuthRoute;
+// };
 
 const Dashboard = () => {
   return (
-    <main className="grid grid-cols-dashboard min-h-screen font-nunito">
-      <section className="bg-blue-700 grid justify-center items-center font-semibold 2xl:text-xl sm:text-lg text-white">
-        <h2 className="text-2xl font-bold">E-Product</h2>
-        <div className="grid gap-y-8">
-          <article className="flex items-center gap-2">
+    <main className="grid grid-cols-dashboard min-h-screen font-manrope">
+      <section className="bg-blue-700 grid pl-6 items-center font-semibold 2xl:text-xl sm:text-lg text-white">
+        <h2 className="text-2xl font-bold">LUNA VPN</h2>
+        <div className="grid gap-y-6">
+          <article className="flex items-center gap-2 pl-3 py-2">
             <MdOutlineDashboard />
             <p className="capitalize">Dashboard</p>
           </article>
-          <article className="flex items-center gap-2">
+          <article className="flex items-center gap-2 bg-white text-blue-700 py-2 pl-3 rounded-l-3xl">
             <RiShieldUserFill />
             <p className="capitalize">users</p>
           </article>
-          <article className="flex items-center gap-2">
+          <article className="flex items-center gap-2 pl-3 py-2">
             <TfiPieChart />
             <p className="capitalize">statistic</p>
           </article>
-          <article className="flex items-center gap-2">
+          <article className="flex items-center gap-2 pl-3 py-2">
             <AiOutlineTeam />
             <p className="capitalize">team members</p>
           </article>
-          <article className="flex items-center gap-2">
+          <article className="flex items-center gap-2 pl-3 py-2">
             <IoMdSettings />
             <p className="capitalize">settings</p>
           </article>
-          <article className="flex items-center gap-2">
+          <article className="flex items-center gap-2 pl-3 py-2">
             <AiOutlineTag />
             <p className="capitalize">offer</p>
           </article>
         </div>
-        <div className="flex gap-3 text-xl">
+        <div className="flex gap-3 text-xl pl-3">
           <BsFacebook />
           <AiFillTwitterCircle />
           <AiFillGoogleCircle />
         </div>
       </section>
-      <section className="pr-10 pl-4 pt-7">
-        <div className="flex justify-between items-center">
+      <section className="pl-4 pt-7">
+        <div className="flex justify-between items-center mr-10">
           <article>
             <h3 className="2xl:text-2xl sm:text-xl font-semibold">User</h3>
             <p className="2xl:text-lg sm:text-md">30 Users found</p>
@@ -91,25 +91,27 @@ const Dashboard = () => {
             </div>
           </article>
         </div>
-        <div className="flex items-center 2xl:text-sm sm:text-xs font-medium 2xl:mt-6 sm:mt-4 justify-between">
+        <div className="flex items-center 2xl:text-sm sm:text-xs font-medium 2xl:mt-6 sm:mt-4 justify-between mr-10">
           <ul className="flex gap-6 text-gray-300">
-            <li className="text-black">All Orders</li>
+            <li className="text-black">All Users</li>
             <li>Paid Users</li>
             <li>Trial Users</li>
           </ul>
           <article className="flex items-center gap-1">
-            <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gray-200 rounded-sm">
+            {/* <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gray-200 rounded-sm">
               <HiOutlineCalendarDays />
               <p>27 march 2023</p>
-            </div>
+            </div> */}
+            <DatePicker />
             <p>To</p>
-            <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gray-200 rounded-sm">
+            <DatePicker />
+            {/* <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gray-200 rounded-sm">
               <HiOutlineCalendarDays />
               <p>03 Feb 2023</p>
-            </div>
+            </div> */}
           </article>
         </div>
-        <div className="grid grid-cols-7 px-3 2xl:py-2 sm:py-1.5 justify-items-center 2xl:text-md sm:text-sm bg-gray-100 rounded-md my-6">
+        <div className="grid grid-cols-7 px-3 2xl:py-2 sm:py-1.5 justify-items-center 2xl:text-md sm:text-sm bg-gray-100 rounded-md my-6 mr-10">
           <p>Id</p>
           <p className="capitalize">Name</p>
           <p className="capitalize">address</p>
@@ -119,7 +121,7 @@ const Dashboard = () => {
           <p>Action</p>
         </div>
         <div className="grid">
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mb-4">
+          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2 ">
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -134,11 +136,11 @@ const Dashboard = () => {
             <p>$72.0</p>
             <p className="capitalize">pending</p>
             <p className="flex gap-3">
-              <IoMdSettings className="p-0.5 bg-gray-100 text-xl rounded-sm" />
-              <FiChevronDown className="p-0.5 bg-gray-100 text-xl rounded-sm" />
+              <IoMdSettings className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
+              <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mb-4">
+          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -153,11 +155,11 @@ const Dashboard = () => {
             <p>$72.0</p>
             <p className="capitalize">pending</p>
             <p className="flex gap-3">
-              <IoMdSettings className="p-0.5 bg-gray-100 text-xl rounded-sm" />
-              <FiChevronDown className="p-0.5 bg-gray-100 text-xl rounded-sm" />
+              <IoMdSettings className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
+              <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mb-4">
+          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -172,11 +174,11 @@ const Dashboard = () => {
             <p>$72.0</p>
             <p className="capitalize">pending</p>
             <p className="flex gap-3">
-              <IoMdSettings className="p-0.5 bg-gray-100 text-xl rounded-sm" />
-              <FiChevronDown className="p-0.5 bg-gray-100 text-xl rounded-sm" />
+              <IoMdSettings className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
+              <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mb-4">
+          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -191,11 +193,11 @@ const Dashboard = () => {
             <p>$72.0</p>
             <p className="capitalize">pending</p>
             <p className="flex gap-3">
-              <IoMdSettings className="p-0.5 bg-gray-100 text-xl rounded-sm" />
-              <FiChevronDown className="p-0.5 bg-gray-100 text-xl rounded-sm" />
+              <IoMdSettings className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
+              <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mb-4">
+          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -210,11 +212,11 @@ const Dashboard = () => {
             <p>$72.0</p>
             <p className="capitalize">pending</p>
             <p className="flex gap-3">
-              <IoMdSettings className="p-0.5 bg-gray-100 text-xl rounded-sm" />
-              <FiChevronDown className="p-0.5 bg-gray-100 text-xl rounded-sm" />
+              <IoMdSettings className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
+              <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mb-4">
+          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -229,11 +231,11 @@ const Dashboard = () => {
             <p>$72.0</p>
             <p className="capitalize">pending</p>
             <p className="flex gap-3">
-              <IoMdSettings className="p-0.5 bg-gray-100 text-xl rounded-sm" />
-              <FiChevronDown className="p-0.5 bg-gray-100 text-xl rounded-sm" />
+              <IoMdSettings className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
+              <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
-          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mb-4">
+          <div className="grid grid-cols-7 px-3 2xl:py-2.5 sm:py-1.5 border border-gray-100 shadow-md justify-items-center items-center sm:text-xs 2xl:text-sm rounded-sm font-semibold mr-10 mb-4 hover:text-white hover:bg-blue-700 hover:mr-3 hover:ml-7 sm:hover:py-2  ">
             <p>#2734</p>
             <p className="capitalize flex items-center gap-1">
               <img
@@ -248,12 +250,12 @@ const Dashboard = () => {
             <p>$72.0</p>
             <p className="capitalize">pending</p>
             <p className="flex gap-3">
-              <IoMdSettings className="p-0.5 bg-gray-100 text-xl rounded-sm" />
-              <FiChevronDown className="p-0.5 bg-gray-100 text-xl rounded-sm" />
+              <IoMdSettings className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
+              <FiChevronDown className="p-0.5 text-xl rounded-sm hover:bg-blue-500" />
             </p>
           </div>
         </div>
-        <div className="flex justify-between items-center 2xl:text-sm sm:text-xs font-bold my-4">
+        <div className="flex justify-between items-center 2xl:text-sm sm:text-xs font-bold my-4 mr-10">
           <main>Showing 06-14 Of 28</main>
           <div className="flex items-center gap-2 cursor-pointer">
             <BiChevronLeft />
@@ -271,5 +273,5 @@ const Dashboard = () => {
   );
 };
 
-withAuth(Dashboard)
+// withAuth(Dashboard)
 export default Dashboard;
