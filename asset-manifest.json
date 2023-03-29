@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/lura_website/static/css/main.b9d6e960.css",
-    "main.js": "/lura_website/static/js/main.5e37dbc2.js",
+    "main.css": "/lura_website/static/css/main.64aa8604.css",
+    "main.js": "/lura_website/static/js/main.4941a3a0.js",
     "static/media/vpnImage.svg": "/lura_website/static/media/vpnImage.84c13c3911f7878e3685b0976ca5ac94.svg",
     "index.html": "/lura_website/index.html",
-    "main.b9d6e960.css.map": "/lura_website/static/css/main.b9d6e960.css.map",
-    "main.5e37dbc2.js.map": "/lura_website/static/js/main.5e37dbc2.js.map"
+    "main.64aa8604.css.map": "/lura_website/static/css/main.64aa8604.css.map",
+    "main.4941a3a0.js.map": "/lura_website/static/js/main.4941a3a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9d6e960.css",
-    "static/js/main.5e37dbc2.js"
+    "static/css/main.64aa8604.css",
+    "static/js/main.4941a3a0.js"
   ]
 }
