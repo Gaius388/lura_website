@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import vpnImage from "./vpnImage.svg";
+import vpnImage from "../vpnImage.svg";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -27,7 +27,7 @@ const LoginPage = () => {
       // setAuth(true);
       setErrorMessage("");
       localStorage.setItem("isAuthenticated", true);
-      navigate("/dashboard");
+      navigate("/layout");
     } else {
       // setAuth(false);
       setEmail("");
