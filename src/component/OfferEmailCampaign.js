@@ -39,8 +39,8 @@ const OfferEmailCampaign = () => {
   const mailchimp = require("@mailchimp/mailchimp_marketing");
 
   mailchimp.setConfig({
-    apiKey: "338c0f5ba5f6a98dab0357d4371cabf7-us9",
-    server: "us9",
+    apiKey: process.env.REACT_APP_KEY,
+    server:  process.env.REACT_APP_SERVER 
   });
   async function run() {
     const response = await mailchimp.ping.get();
