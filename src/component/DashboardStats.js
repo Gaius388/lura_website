@@ -13,9 +13,9 @@ Chart.register(CategoryScale);
 
 const DashboardStats = () => {
   return (
-    <div className="grid grid-cols-3 gap-7 pt-7">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 pt-7 gap-y-12 ">
       <article className="border rounded-lg drop-shadow-md px-3 chart_view">
-        <main className="h-[11rem] bg-cyan-400 rounded-md mb-2 mt-[-1.2em] relative z-10 grid justify-center">
+        <main className="h-[11rem] bg-white rounded-md mb-2 mt-[-1.2em] relative z-10 grid justify-center items-center">
           <Bar
             data={dataChart1}
             options={{
@@ -47,7 +47,7 @@ const DashboardStats = () => {
         </div>
       </article>
       <article className="border rounded-lg drop-shadow-md px-3 chart_view">
-        <main className="h-[11rem] bg-orange-400 rounded-md mb-2 mt-[-1.2em] relative z-10">
+        <main className="h-[11rem] bg-white rounded-md mb-2 mt-[-1.2em] relative z-10 grid justify-center items-center">
           <Line
             data={dataChart2}
             options={{
@@ -78,7 +78,7 @@ const DashboardStats = () => {
         </div>
       </article>
       <article className="border rounded-lg drop-shadow-md px-3 chart_view">
-        <main className="h-[11rem] bg-red-500 rounded-md mb-2 mt-[-1.2em] relative z-10">
+        <main className="h-[11rem] bg-white rounded-md mb-2 mt-[-1.2em] relative z-10 grid justify-center items-center">
           <Line
             data={dataChart3}
             options={{

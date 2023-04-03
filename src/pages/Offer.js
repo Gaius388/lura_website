@@ -23,7 +23,7 @@ const Offer = () => {
       {popOffer ? <OfferPopup toggleOfferPopup={toggleOfferPopup} /> : null}
       <OfferEmailCampaign />
       <div className="flex items-center justify-between">
-        <h3 className="font-medium text-gray-500">
+        <h3 className="font-medium text-gray-500 text-sm">
           Create and manage your campaigns here
         </h3>
         <div className="flex capitalize gap-5">
@@ -32,21 +32,21 @@ const Offer = () => {
             onClick={toggleDropDown}
           >
             <GiTwoCoins />
-            <p className="text-sm">balance & history</p>
+            <p className="text-xs">balance & history</p>
             <div
-              className={`rounded-md p-2 absolute top-[2.4em] right-0 z-10 transition-[height] duration-500s linear ${
+              className={`rounded-md p-2 absolute top-[2.2em] right-0 z-10 transition-[height] duration-500s linear ${
                 dropDown
-                  ? "min-h-[4em] min-w-[11.4em] bg-blue-100"
+                  ? "min-h-[4em] min-w-[10.3em] bg-blue-100"
                   : "h-0 m-0 overflow-hidden bg-transparent"
               } `}
             >
               <ul className="text-center">
-                <li className="py-2.5 cursor-pointer text-xs font-bold flex items-center gap-2 justify-center">
-                  <AiOutlineHistory/>
+                <li className="py-2.5 cursor-pointer text-[0.6em] font-bold flex items-center gap-2 justify-center">
+                  <AiOutlineHistory />
                   <span>SMS History</span>
                 </li>
-                <li className="py-2.5 cursor-pointer text-xs font-bold flex items-center gap-2 justify-center">
-                  <GiTwoCoins/>
+                <li className="py-2.5 cursor-pointer text-[0.6em] font-bold flex items-center gap-2 justify-center">
+                  <GiTwoCoins />
                   <span>SMS Balance</span>
                 </li>
               </ul>
@@ -57,21 +57,21 @@ const Offer = () => {
             onClick={toggleOfferPopup}
           >
             <BsPlusLg />
-            <p className="text-sm">create campaign</p>
+            <p className="text-xs">create campaign</p>
           </article>
         </div>
       </div>
-      <div className="w-full min-h-[10em] bg-white rounded-sm drop-shadow-md mt-12 mx-auto px-6 text-gray-500 font-bold text-md pb-4">
-        <section className="flex items-center justify-between pt-8 pb-4 px-10">
+      <div className="w-full min-h-[9em] bg-white rounded-sm drop-shadow-md mt-12 mx-auto px-6 text-gray-500 font-bold text-md pb-4">
+        <section className="flex items-center justify-between pt-6 pb-4 px-10 text-xs">
           <p>#</p>
           <p>Campaign</p>
           <p>Date</p>
           <p>Sent SMS</p>
           <p>Status</p>
         </section>
-        <hr className="mb-4" />
+        <hr className="mb-3" />
         {campaigns && campaigns.length < 1 ? (
-          <p className="text-center font-light">It's empty here</p>
+          <p className="text-center font-light text-sm">It's empty here</p>
         ) : (
           <OfferNewCampaign />
         )}

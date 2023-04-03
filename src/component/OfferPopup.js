@@ -12,7 +12,7 @@ const OfferPopup = ({ toggleOfferPopup }) => {
   } = useCampaignContext();
   return (
     <div className="absolute w-full h-full top-0 left-0 z-10 rounded-md backdrop-brightness-50">
-      <div className="absolute min-w-[35%] min-h-[80%] top-[5%] left-[33%] border rounded-md bg-white rounded-lg capitalize font-bold text-gray-700 pt-4 flex flex-col">
+      <div className="absolute min-w-[35%] min-h-[80%] top-[5%] left-[7%] sm:left-[20%] lg:left-[33%] border rounded-md bg-white rounded-lg capitalize font-bold text-gray-700 pt-4 flex flex-col">
         <div className="pb-4 px-4 border border-transparent border-b-gray-300 flex justify-between items-center text-xl">
           <h3>Create Campaign</h3>
           <AiOutlineClose

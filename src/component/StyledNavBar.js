@@ -28,7 +28,6 @@ const menuItems = [
     name: "Users",
     icon: <RiShieldUserFill />,
     to: "users",
-    subMenus: [{ name: "Courses" }, { name: "Videos" }],
   },
   { name: "Statistics", icon: <TfiPieChart />, to: "/" },
   { name: "Team Member", icon: <AiOutlineTeam />, to: "/" },
@@ -50,23 +49,20 @@ const StyledNavBar = ({ onCollapse }) => {
   const toggleDropNotify = () => {
     setDropNotify(!dropNotify);
   };
-  useEffect(() => {
-    onCollapse(inactive);
-  }, [inactive]);
   return (
     <main className="min-h-screen font-manrope relative z-0">
       <section
-        className={`side-menu fixed bg-${backColour} h-full px-5 p-7 transition-[width] duration-200s ease-in ${
-          inactive ? "w-[4.4em]" : "w-[18em]"
+        className={`side-menu fixed bg-${backColour} h-full  py-7 transition-[width] duration-200s ease-in ${
+          inactive ? "w-[4.4em]" : "w-[13.5em]"
         }`}
         style={{ backgroundImage: `url(../images/${backImage})` }}
       >
-        <div className="top-section relative">
+        <div className="top-section relative px-5">
           <div className="logo w-[2.2em] h-[2.2em] overflow-hidden inline-block">
             <img src={logo} alt="profile" className="max-w-full max-h-full" />
           </div>
           <h3
-            className={`user-info absolute inline-block transition-opacity pl-[2em] leading-10 text-xl font-bold text-white ${
+            className={`user-info absolute inline-block transition-opacity pl-[0.8em] leading-10 text-xl font-bold text-white ${
               inactive ? "opacity-0 w-0 h-0 overflow-hidden" : "opacity-100"
             }`}
           >
@@ -74,7 +70,7 @@ const StyledNavBar = ({ onCollapse }) => {
           </h3>
           <div
             className={`toggle-menu-btn text-gray-500 absolute top-1/2 cursor-pointer ${
-              inactive ? "right-[-2.7em]" : "right-0"
+              inactive ? "right-[-2.3em]" : "right-[1em]"
             } -translate-y-1/2`}
             onClick={toggleInactive}
           >
@@ -85,16 +81,7 @@ const StyledNavBar = ({ onCollapse }) => {
             )}
           </div>
         </div>
-        <div className="search-controller relative text-white">
-          <CiSearch className="search-btn text-black absolute text-sm w-[2.5em] h-[2em]" />
-          <input
-            type="text"
-            placeholder="search"
-            className="outline-none h-[2rem] bg-transparent rounded-sm block my-5 mx-0 w-full pl-10"
-          />
-        </div>
-        <div className="divider w-full h-[0.1em] rounded-sm bg-[#333] mb-4"></div>
-        <div className="main-menu my-1.5">
+        <div className="main-menu mb-1.5 mt-12 pl-3">
           <ul>
             {menuItems.map((item, index) => (
               <MenuItems
@@ -130,7 +117,7 @@ const StyledNavBar = ({ onCollapse }) => {
       </section>
       <section
         className={`py-7 transition-[margin-left] duration-200s linear ${
-          inactive ? "ml-[5.9em]" : "ml-[18em]"
+          inactive ? "ml-[5.9em]" : "ml-[14em]"
         }`}
       >
         <div className="flex justify-between items-center mr-10 pl-4">

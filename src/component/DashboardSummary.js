@@ -9,10 +9,10 @@ import { HiTag } from "react-icons/hi";
 
 const DashboardSummary = () => {
   return (
-    <div className="grid grid-cols-4 gap-7 my-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7 my-6">
       <article className="px-3 border shadow-lg rounded-lg">
         <div className="grid grid-cols-2 items-center">
-          <MdOutlineContentCopy className="text-white text-[5.5rem] p-6 bg-orange-400 rounded-md mt-[-0.2em]" />
+          <MdOutlineContentCopy className="text-white text-[5.5rem] p-6 bg-blue-700 rounded-md mt-[-0.2em]" />
           <span className="text-right">
             <h1 className="text-sm font-thin">Used Space</h1>
             <p className="text-xl font-light">
@@ -28,7 +28,7 @@ const DashboardSummary = () => {
       </article>
       <article className="px-3 border shadow-lg rounded-lg">
         <div className="grid grid-cols-2 items-center">
-          <SiHomeassistantcommunitystore className="text-white text-[5.5rem] p-6 bg-green-400 rounded-md mt-[-0.2em]" />
+          <SiHomeassistantcommunitystore className="text-white text-[5.5rem] p-6 bg-blue-700 rounded-md mt-[-0.2em]" />
           <span className="text-right">
             <h1 className="text-sm font-thin">Revenue</h1>
             <p className="text-xl font-light">$34,245</p>
@@ -42,7 +42,7 @@ const DashboardSummary = () => {
       </article>
       <article className="px-3 border shadow-lg rounded-lg">
         <div className="grid grid-cols-2 items-center">
-          <MdInfoOutline className="text-white text-[5.5rem] p-6 bg-red-500 rounded-md mt-[-0.2em]" />
+          <MdInfoOutline className="text-white text-[5.5rem] p-6 bg-blue-700 rounded-md mt-[-0.2em]" />
           <span className="text-right">
             <h1 className="text-sm font-thin">Fixed Issues</h1>
             <p className="text-xl font-light">75</p>
@@ -56,7 +56,7 @@ const DashboardSummary = () => {
       </article>
       <article className="px-3 border shadow-lg rounded-lg">
         <div className="grid grid-cols-2 items-center">
-          <BsTwitter className="text-white text-[5.5rem] p-6 bg-cyan-400 rounded-md mt-[-0.2em]" />
+          <BsTwitter className="text-white text-[5.5rem] p-6 bg-blue-700 rounded-md mt-[-0.2em]" />
           <span className="text-right">
             <h1 className="text-sm font-thin">Followers</h1>
             <p className="text-xl font-light">+234</p>

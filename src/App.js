@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import Offer from "./pages/Offer";
 import StyledNavBar from "./component/StyledNavBar";
-import CollapseDashboard from "./component/CollapseDashboard";
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
         <Route
           path="/layout"
           element={
-            <StyledNavBar onCollapse={(inactive) => console.log(inactive)} />
+            <StyledNavBar />
           }
         >
           <Route index element={<Dashboard />} />
