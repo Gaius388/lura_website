@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/lura_website/static/css/main.84fc34ec.css",
-    "main.js": "/lura_website/static/js/main.fd2fd1fb.js",
+    "main.css": "/lura_website/static/css/main.fb8989ba.css",
+    "main.js": "/lura_website/static/js/main.7cd67a02.js",
     "static/media/sidebar-2.jpg": "/lura_website/static/media/sidebar-2.42e96f8ddd5da9401a40.jpg",
     "static/media/sidebar-4.jpg": "/lura_website/static/media/sidebar-4.ab008ac359fa7dfaf7ac.jpg",
     "static/media/sidebar-3.jpg": "/lura_website/static/media/sidebar-3.482940f20ee5da65a5a6.jpg",
     "static/media/sidebar-1.jpg": "/lura_website/static/media/sidebar-1.d4b3c41754b32b36aabb.jpg",
     "static/media/vpnImage.svg": "/lura_website/static/media/vpnImage.84c13c3911f7878e3685b0976ca5ac94.svg",
     "index.html": "/lura_website/index.html",
-    "main.84fc34ec.css.map": "/lura_website/static/css/main.84fc34ec.css.map",
-    "main.fd2fd1fb.js.map": "/lura_website/static/js/main.fd2fd1fb.js.map"
+    "main.fb8989ba.css.map": "/lura_website/static/css/main.fb8989ba.css.map",
+    "main.7cd67a02.js.map": "/lura_website/static/js/main.7cd67a02.js.map"
   },
   "entrypoints": [
-    "static/css/main.84fc34ec.css",
-    "static/js/main.fd2fd1fb.js"
+    "static/css/main.fb8989ba.css",
+    "static/js/main.7cd67a02.js"
   ]
 }
